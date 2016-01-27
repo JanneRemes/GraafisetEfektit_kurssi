@@ -90,19 +90,24 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\GlobalShaderUniforms.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\MyMaterials.cpp" />
     <ClCompile Include="..\..\src\scene.cpp" />
+    <ClCompile Include="..\..\src\SimpleMeshRenderingScene.cpp" />
     <ClCompile Include="..\..\src\teapot.cpp" />
     <ClCompile Include="..\..\src\tehtävä2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\GlobalShaderUniforms.h" />
     <ClInclude Include="..\..\include\MyMaterials.h" />
     <ClInclude Include="..\..\include\QuadScene.h" />
     <ClInclude Include="..\..\include\scene.h" />
+    <ClInclude Include="..\..\include\SimpleMeshRenderingScene.h" />
     <ClInclude Include="..\..\include\teapot.h" />
     <ClInclude Include="..\..\include\Tehtävä2.h" />
     <ClInclude Include="..\..\include\TriangleScene.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Engine\build\win32\engine.vcxproj">
@@ -112,6 +117,9 @@
   <ItemGroup>
     <None Include="..\..\assets\QuadScene.glfs" />
     <None Include="..\..\assets\QuadScene.glvs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SimpleGraphicsTest.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

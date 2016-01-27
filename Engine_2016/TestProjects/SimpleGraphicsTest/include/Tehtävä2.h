@@ -4,7 +4,7 @@
 #include "scene.h"
 #include <core/log.h>
 #include <graphics\Shader.h>
-
+#include "MyMaterials.h"
 
 class QuadScene2 : public Scene
 {
@@ -15,12 +15,14 @@ public:
 	virtual void render(graphics::ESContext* esContext);
 
 private:
-	float m_count;
+	//float m_count;
 	//GLuint m_hShaderProgram;
 	core::Ref<graphics::Shader> m_shader;
 	int numAttributes;
 	//FRM_SHADER_ATTRIBUTE *attributes[];
-
+	SharedShaderValues m_sharedValues;
+	core::Ref<graphics::ShaderUniforms> m_material;
+	float totalTime;
 };
 
 #endif

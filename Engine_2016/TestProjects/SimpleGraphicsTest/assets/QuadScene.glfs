@@ -6,18 +6,17 @@
 																				 
 varying   vec4 g_vVSColor;											 
 varying   vec2 g_vVTexCoord;										 
-																				 
+								
+uniform float totalTime;												 
 																				 
 void main()														 
-{																	 
-																				 
-	float x = g_vVTexCoord.x * 100;									
-	float y = g_vVTexCoord.y * 100;									
-	float t = 1.2;													 
-	float vv = 0.25 * (												 
-(0.5 + (0.5 * sin(x / 7.0 + t)))  +								 
-(0.5 + (0.5 * sin(x / 5.0 - t)))  + 								 
-(0.5 + (0.5 * sin((x + y)/ 6.0 - t)))  +							 
-(0.5 + (0.5 * sin(sqrt(float(x*x + y*y)) /4.0 - t))));				 
-gl_FragColor = vec4(vv, vv, vv, 1.0) * g_vVSColor;					 
+{
+	float x = g_vVTexCoord.x * 500;
+	float y = g_vVTexCoord.y * 500;
+	float vv = 0.25 * tan(
+(0.5 + (0.5 * sin(x / 7.0 + totalTime)))  +
+(0.5 + (0.5 * sin(x / 5.0 - totalTime)))  +
+(0.5 + (0.5 * sqrt((x + y)/ 6.0 - totalTime)))  +
+(0.5 + (0.5 * sin(sqrt(float(x*x + y*y)) /4.0 - totalTime))));
+gl_FragColor = vec4(vv, vv, vv, 1.0) * g_vVSColor;
 };

@@ -2,7 +2,7 @@
 
 QuadScene2::QuadScene2()
 {
-
+	LOG("QuadScene2 construct");
 	//shader lataus
 	FRM_SHADER_ATTRIBUTE attributes[3] = {
 		{ "g_vVertex", 0 },
@@ -13,27 +13,40 @@ QuadScene2::QuadScene2()
 	numAttributes = sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE);
 	m_shader = new graphics::Shader("assets/QuadScene.glvs", "assets/QuadScene.glfs", attributes, numAttributes);
 
-	LOG("QuadScene2 construct");
+
 	checkOpenGL();
 
-	m_count = 0.0f;
-	//m_hShaderProgram = 0;
+	//m_count = 0.0f;
+	//m_sharedValues.totalTime = 0.0f;
+	totalTime = 0.0f;
+	m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
+	
+	
 
-	//FrmCompileShaderProgram("assets/QuadScene.glfs", "assets/QuadScene.glvs", &m_hShaderProgram, attributes, sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE));
-	//checkOpenGL();
 }
 
 QuadScene2::~QuadScene2()
 {
-	LOG("TriangleScene destruct");
+	LOG("QuadScene2 destruct");
 }
 
 void QuadScene2::update(graphics::ESContext* esContext, float deltaTime)
 {
-	m_count += deltaTime;
+	//m_count += deltaTime;
 
-	if (m_count > 1.0f)
-		m_count = 0.0f;
+	//if (m_count > 1.0f)
+	//	m_count = 0.0f;
+
+	//if (m_sharedValues.totalTime > 1.0f)
+	//{
+	//	m_sharedValues.totalTime -= deltaTime;
+	//}
+	//else
+	//{
+		//m_sharedValues.totalTime += deltaTime;
+		  totalTime += deltaTime;
+	//}
+
 }
 
 void QuadScene2::render(graphics::ESContext* esContext)
@@ -74,7 +87,7 @@ void QuadScene2::render(graphics::ESContext* esContext)
 	checkOpenGL();
 
 	// Set the shader program and the texture
-	m_shader->bind();
+	m_material->bind();
 
 	// Draw the colored triangle
 	glVertexAttribPointer(0, 4, GL_FLOAT, 0, 0, VertexPositions);
