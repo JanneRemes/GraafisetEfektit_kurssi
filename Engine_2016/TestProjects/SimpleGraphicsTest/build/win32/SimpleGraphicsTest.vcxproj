@@ -118,6 +118,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\assets\BlingPhong.glvs" />
+    <None Include="..\..\assets\BlinnPhong.glfs" />
     <None Include="..\..\assets\QuadScene.glfs" />
     <None Include="..\..\assets\QuadScene.glvs" />
   </ItemGroup>

@@ -82,6 +82,12 @@
     <None Include="..\..\assets\QuadScene.glvs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\..\assets\BlingPhong.glvs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\assets\BlinnPhong.glfs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SimpleGraphicsTest.rc">
