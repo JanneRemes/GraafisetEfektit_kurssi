@@ -18,10 +18,9 @@ public:
 	virtual void render(graphics::ESContext* esContext);
 
 	graphics::Mesh* createTeapotMesh();
-
+	
 private:
-
-	core::Ref<graphics::Shader> m_shader;
+	
 	int numAttributes;
 	SharedShaderValues m_sharedValues;
 	core::Ref<graphics::ShaderUniforms> m_material;

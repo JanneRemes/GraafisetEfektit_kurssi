@@ -10,9 +10,10 @@ Simple3DScene::Simple3DScene()
 	};
 
 	//load shader
-
-	numAttributes = sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE);
-	m_shader = new graphics::Shader("assets/Simple3d.glvs", "assets/Simple3d.glfs", attributes, numAttributes);
+	core::Ref<graphics::Shader> m_shader =
+		new graphics::Shader("assets/Simple3d.glvs", "assets/Simple3d.glfs",
+		attributes, sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE));
+	
 	m_mesh = createTeapotMesh();
 
 	checkOpenGL();
@@ -21,6 +22,7 @@ Simple3DScene::Simple3DScene()
 	m_totalTime = 0.0f;
 
 	m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
+
 
 
 

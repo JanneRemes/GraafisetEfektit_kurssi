@@ -97,6 +97,7 @@
     <ClCompile Include="..\..\src\SimpleMeshRenderingScene.cpp" />
     <ClCompile Include="..\..\src\teapot.cpp" />
     <ClCompile Include="..\..\src\tehtävä2.cpp" />
+    <ClCompile Include="BlinnPhongScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\GlobalShaderUniforms.h" />
@@ -107,7 +108,9 @@
     <ClInclude Include="..\..\include\teapot.h" />
     <ClInclude Include="..\..\include\Tehtävä2.h" />
     <ClInclude Include="..\..\include\TriangleScene.h" />
+    <ClInclude Include="BlinnPhongScene.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SimpleMaterialUniforms.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Engine\build\win32\engine.vcxproj">

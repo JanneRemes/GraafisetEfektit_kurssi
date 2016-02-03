@@ -19,7 +19,7 @@ QuadScene2::QuadScene2()
 	//m_count = 0.0f;
 	//m_sharedValues.totalTime = 0.0f;
 	totalTime = 0.0f;
-	m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
+	//m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
 	
 	
 

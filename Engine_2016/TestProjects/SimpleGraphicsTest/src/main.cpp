@@ -13,7 +13,7 @@
 
 // Current scene and max num of scenes
 core::Ref<Scene> m_currentScene = 0;
-static const int NUM_SCENES = 4;
+static const int NUM_SCENES = 3;
 static int sceneIndex = 0; // Current scene index.
 
 // Initialize engine globals (memory manager)
@@ -41,8 +41,8 @@ void changeCurrentScene(int index)
 	{
 	case 0: m_currentScene = new TriangleScene(); break;
 	case 1: m_currentScene = new QuadScene(); break;
-	case 2: m_currentScene = new QuadScene2(); break;
-	case 3: m_currentScene = new Simple3DScene(); break;
+	//case 2: m_currentScene = new QuadScene2(); break;
+	case 2: m_currentScene = new Simple3DScene(); break;
 	default:
 		break;
 	}
