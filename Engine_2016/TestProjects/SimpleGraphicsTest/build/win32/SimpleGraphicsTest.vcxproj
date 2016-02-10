@@ -90,6 +90,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\BlingPhonScene - MRS.cpp" />
     <ClCompile Include="..\..\src\GlobalShaderUniforms.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\MyMaterials.cpp" />
@@ -100,6 +101,7 @@
     <ClCompile Include="BlinnPhongScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\BlingPhongScene - SMR.h" />
     <ClInclude Include="..\..\include\GlobalShaderUniforms.h" />
     <ClInclude Include="..\..\include\MyMaterials.h" />
     <ClInclude Include="..\..\include\QuadScene.h" />

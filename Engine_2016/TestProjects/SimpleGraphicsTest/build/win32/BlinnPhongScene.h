@@ -9,6 +9,8 @@
 #include <graphics\Mesh.h>
 #include <teapot.h>
 
+#include "SimpleMaterialUniforms.h"
+
 class BlinnPhongScene : public Scene
 {
 public:
@@ -32,6 +34,8 @@ private:
 	slmath::mat4 m_matProjection;
 	slmath::mat4 m_matView;
 	slmath::mat4 m_matModel;
+	core::Ref<graphics::Texture> m_texture;
+	core::Ref<graphics::Image> m_image;
 
 };
 #endif

@@ -39,6 +39,9 @@
     <ClCompile Include="BlinnPhongScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\BlingPhonScene - MRS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\scene.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SimpleMaterialUniforms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\BlingPhongScene - SMR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

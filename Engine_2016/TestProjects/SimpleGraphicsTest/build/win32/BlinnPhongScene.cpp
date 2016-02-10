@@ -13,8 +13,10 @@ BlinnPhongScene::BlinnPhongScene()
 
 	//load shader
 	core::Ref<graphics::Shader> m_shader =
-		new graphics::Shader("assets/Simple3d.glvs", "assets/Simple3d.glfs",
-		attributes, sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE));
+		new graphics::Shader("assets/BlinnPhong.glvs", "assets/BlinnPhong.glfs"/*"assets/BlinnPhong.glvs", "assets/BlinnPhong.glfs"*/,
+ 		attributes, sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE));
+
+	//"assets/Simple3d.glvs", "assets/Simple3d.glfs"
 
 	m_mesh = createTeapotMesh();
 
@@ -23,10 +25,15 @@ BlinnPhongScene::BlinnPhongScene()
 	//m_count = 0.0f;
 	m_totalTime = 0.0f;
 
-	m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
+	//m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
 
-
-
+	SimpleMaterialUniforms *simpleMaterialUniforms = 
+		new SimpleMaterialUniforms(m_shader, &m_sharedValues);
+	
+	simpleMaterialUniforms->vAmbient = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
+	simpleMaterialUniforms->vDiffuse = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
+	simpleMaterialUniforms->vSpecular = slmath::vec4(1.0f, 1.0f, 1.0f, 5.0f);
+	m_material = simpleMaterialUniforms;
 
 }
 
@@ -131,5 +138,4 @@ graphics::Mesh* BlinnPhongScene::createTeapotMesh()
 
 	//create mesh from ib and vb
 	return new graphics::Mesh(ib, vb);
-
 }
