@@ -7,7 +7,9 @@
 #include <graphics\Shader.h>
 #include "MyMaterials.h"
 #include <graphics\Mesh.h>
+#include <graphics\Image.h>
 #include <teapot.h>
+#include <graphics\Texture.h>
 
 #include "SimpleMaterialUniforms.h"
 
@@ -34,7 +36,7 @@ private:
 	slmath::mat4 m_matProjection;
 	slmath::mat4 m_matView;
 	slmath::mat4 m_matModel;
-	core::Ref<graphics::Texture> m_texture;
+	core::Ref<graphics::Texture2D> m_texture;
 	core::Ref<graphics::Image> m_image;
 
 };

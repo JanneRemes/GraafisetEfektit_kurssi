@@ -62,6 +62,4 @@
 		const SharedShaderValues* m_shaderShaderValues;
 		GLint m_ids[8];
 	};
-
-
 #endif

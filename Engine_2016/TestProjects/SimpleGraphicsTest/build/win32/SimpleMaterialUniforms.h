@@ -4,7 +4,7 @@
 #include <graphics\Shader.h>
 #include <graphics\Texture.h>
 
-#include "MyMaterials.h">
+#include "MyMaterials.h"
 
 class SimpleMaterialUniforms : public graphics::ShaderUniforms
 {
@@ -57,6 +57,41 @@ private:
 	GLint m_materialSpecularloc;
 	GLint m_diffuseTextureLoc;
 
+};
+
+
+class SimpleMaterialWithTextureUniforms : public SimpleMaterialUniforms
+{
+public:
+	SimpleMaterialWithTextureUniforms(graphics::Shader* shader, SharedShaderValues* sharedValues)
+		:SimpleMaterialUniforms(shader, sharedValues)
+	{
+	}
+
+	virtual ~SimpleMaterialWithTextureUniforms()
+	{
+	}
+
+	virtual void getUniformLocation(graphics::Shader* shader)
+	{
+		SimpleMaterialUniforms::getUniformLocations(shader);
+
+		m_diffuseMapLoc = glGetUniformLocation(shader->getProgram(), "s_diffuseMap");
+	}
+
+	virtual void bind(graphics::Shader* shader)
+	{
+		SimpleMaterialUniforms::bind(shader);
+		//bind diffuse texture to texture sampler unit #0
+		glActiveTexture(GL_TEXTURE0 + 0);
+		glBindTexture(GL_TEXTURE_2D, diffuseMap->getTextureId());
+
+		//set sampler unit 0 to be used as sampler for diffuse map uniformn
+		glUniform1i(m_diffuseMapLoc, 0);
+	}
+
+private:
+	GLint m_diffuseMapLoc;
 };
 
 #endif

@@ -1,4 +1,4 @@
-﻿Build started 10.2.2016 15:48:12.
+﻿Build started 17.2.2016 16:07:31.
      1>Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\SimpleGraphicsTest.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          call copyassets.bat
@@ -25,6 +25,7 @@
          ..\..\assets\Plane.obj
          ..\..\assets\QuadScene.glfs
          ..\..\assets\QuadScene.glvs
+         ..\..\assets\sandWall.tga
          ..\..\assets\Simple3d.glfs
          ..\..\assets\Simple3d.glvs
          ..\..\assets\Sphere.obj
@@ -34,7 +35,7 @@
          ..\..\assets\WoodFloorDiffuse.tga
          ..\..\assets\WoodFloorNormal.tga
          ..\..\assets\WoodNormal.tga
-         31 File(s) copied
+         32 File(s) copied
          ..\..\assets\BedroomCubeMap_BK.tga
          ..\..\assets\BedroomCubeMap_DN.tga
          ..\..\assets\BedroomCubeMap_FR.tga
@@ -57,6 +58,7 @@
          ..\..\assets\Plane.obj
          ..\..\assets\QuadScene.glfs
          ..\..\assets\QuadScene.glvs
+         ..\..\assets\sandWall.tga
          ..\..\assets\Simple3d.glfs
          ..\..\assets\Simple3d.glvs
          ..\..\assets\Sphere.obj
@@ -66,30 +68,25 @@
          ..\..\assets\WoodFloorDiffuse.tga
          ..\..\assets\WoodFloorNormal.tga
          ..\..\assets\WoodNormal.tga
-         31 File(s) copied
+         32 File(s) copied
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\..\..\Engine\include\graphics\win32 /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\..\..\Engine\include /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\src\BlingPhonScene - MRS.cpp" ..\..\src\MyMaterials.cpp ..\..\src\SimpleMeshRenderingScene.cpp ..\..\src\main.cpp "..\..\src\tehtävä2.cpp" BlinnPhongScene.cpp
-         SimpleMeshRenderingScene.cpp
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\..\..\Engine\include\graphics\win32 /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\..\..\Engine\include /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlinnPhongScene.cpp
          BlinnPhongScene.cpp
-     1>c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\testprojects\simplegraphicstest\build\win32\simplematerialuniforms.h(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\core\ref.inl(63): error C2027: use of undefined type 'graphics::Image'
-                 c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\graphics\texture.h(11) : see declaration of 'graphics::Image'
-                 c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\core\ref.inl(60) : while compiling class template member function 'core::Ref<graphics::Image>::~Ref(void)'
-                 c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\testprojects\simplegraphicstest\build\win32\blinnphongscene.cpp(6) : see reference to function template instantiation 'core::Ref<graphics::Image>::~Ref(void)' being compiled
-                 c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\testprojects\simplegraphicstest\build\win32\blinnphongscene.h(38) : see reference to class template instantiation 'core::Ref<graphics::Image>' being compiled
-     1>c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\core\ref.inl(63): error C2227: left of '->releaseRef' must point to class/struct/union/generic type
-     1>c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\core\ref.inl(65): warning C4150: deletion of pointer to incomplete type 'graphics::Image'; no destructor called
-                 c:\users\aleksiluo1\documents\github\graafisetefektit_kurssi\engine_2016\engine\include\graphics\texture.h(11) : see declaration of 'graphics::Image'
-         tehtävä2.cpp
-         main.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         MyMaterials.cpp
-         BlingPhonScene - MRS.cpp
-     1>Done Building Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\SimpleGraphicsTest.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\SimpleGraphicsTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\..\..\..\..\Engine\lib\win32 libegl.lib libglesv2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\SimpleGraphicsTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\SimpleGraphicsTest.lib" /MACHINE:X86 Debug\SimpleGraphicsTest.res
+         "Debug\BlingPhonScene - MRS.obj"
+         Debug\GlobalShaderUniforms.obj
+         Debug\main.obj
+         Debug\MyMaterials.obj
+         Debug\scene.obj
+         Debug\SimpleMeshRenderingScene.obj
+         Debug\teapot.obj
+         "Debug\tehtävä2.obj"
+         Debug\BlinnPhongScene.obj
+         C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\engine.lib
+         SimpleGraphicsTest.vcxproj -> C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\SimpleGraphicsTest.exe
+     1>Done Building Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\SimpleGraphicsTest.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:03.97
+Time Elapsed 00:00:01.48

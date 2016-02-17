@@ -1,9 +1,90 @@
-﻿Build started 10.2.2016 12:15:36.
+﻿Build started 17.2.2016 15:03:55.
      1>Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\engine.vcxproj" on node 2 (Build target(s)).
-     1>Lib:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\..\..\include\graphics\win32 /IC:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_WARNINGS /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\graphics\es_util.cpp
+         es_util.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\engine.lib" /NOLOGO Debug\AnimationTimeline.obj
+         Debug\ElapsedTimer.obj
+         Debug\FileStream.obj
+         Debug\log.obj
+         Debug\MemoryManager.obj
+         Debug\Object.obj
+         Debug\PropertySet.obj
+         Debug\allocator.obj
+         Debug\assert.obj
+         Debug\fixed_pool.obj
+         Debug\hashtable.obj
+         Debug\red_black_tree.obj
+         Debug\string.obj
+         Debug\es_util.obj
+         Debug\FrmInput.obj
+         Debug\FrmResourceGLES.obj
+         Debug\FrmShader.obj
+         Debug\FrmUtils.obj
+         Debug\FrmUtilsGLES.obj
+         Debug\SpriteBatch.obj
+         Debug\Texture.obj
+         Debug\lapi.obj
+         Debug\lauxlib.obj
+         Debug\lbaselib.obj
+         Debug\lbitlib.obj
+         Debug\lcode.obj
+         Debug\lcorolib.obj
+         Debug\lctype.obj
+         Debug\ldblib.obj
+         Debug\ldebug.obj
+         Debug\ldo.obj
+         Debug\ldump.obj
+         Debug\lfunc.obj
+         Debug\lgc.obj
+         Debug\linit.obj
+         Debug\liolib.obj
+         Debug\llex.obj
+         Debug\lmathlib.obj
+         Debug\lmem.obj
+         Debug\loadlib.obj
+         Debug\lobject.obj
+         Debug\lopcodes.obj
+         Debug\loslib.obj
+         Debug\lparser.obj
+         Debug\lstate.obj
+         Debug\lstring.obj
+         Debug\lstrlib.obj
+         Debug\ltable.obj
+         Debug\ltablib.obj
+         Debug\ltm.obj
+         Debug\lua.obj
+         Debug\luac.obj
+         Debug\lundump.obj
+         Debug\lvm.obj
+         Debug\lzio.obj
+         Debug\Entity.obj
+         Debug\float_util.obj
+         Debug\intersect_util.obj
+         Debug\mat4.obj
+         Debug\quat.obj
+         Debug\random.obj
+         Debug\random_util.obj
+         Debug\runtime_checks.obj
+         Debug\slmath_lua.obj
+         Debug\vec2.obj
+         Debug\vec3.obj
+         Debug\vec4.obj
+         Debug\ticpp.obj
+         Debug\tinystr.obj
+         Debug\tinyxml.obj
+         Debug\tinyxmlerror.obj
+         Debug\tinyxmlparser.obj
+         Debug\es_util_win32.obj
+         Debug\FrmNoise_Platform.obj
+         Debug\FrmPlatform.obj
+         Debug\FrmStdlib_Platform.obj
+         Debug\FrmUtils_Platform.obj
+         Debug\input_win32.obj
          engine.vcxproj -> C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\Debug\engine.lib
      1>Done Building Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\Engine\build\win32\engine.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.13
+Time Elapsed 00:00:01.33

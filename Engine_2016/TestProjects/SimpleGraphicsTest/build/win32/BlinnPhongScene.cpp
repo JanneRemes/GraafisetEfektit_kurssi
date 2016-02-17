@@ -6,9 +6,10 @@ BlinnPhongScene::BlinnPhongScene()
 {
 	LOG("BlinnPhongScene construct");
 	//shader lataus
-	FRM_SHADER_ATTRIBUTE attributes[2] = {
+	FRM_SHADER_ATTRIBUTE attributes[3] = {
 		{ "g_vPositionOS", graphics::ATTRIB_POSITION },
-		{ "g_vNormalOS", graphics::ATTRIB_NORMAL }
+		{ "g_vNormalOS", graphics::ATTRIB_NORMAL },
+		{ "g_vTextureOS", graphics::ATTRIB_UV}
 	};
 
 	//load shader
@@ -16,25 +17,27 @@ BlinnPhongScene::BlinnPhongScene()
 		new graphics::Shader("assets/BlinnPhong.glvs", "assets/BlinnPhong.glfs"/*"assets/BlinnPhong.glvs", "assets/BlinnPhong.glfs"*/,
  		attributes, sizeof(attributes) / sizeof(FRM_SHADER_ATTRIBUTE));
 
-	//"assets/Simple3d.glvs", "assets/Simple3d.glfs"
-
 	m_mesh = createTeapotMesh();
 
 	checkOpenGL();
 
-	//m_count = 0.0f;
 	m_totalTime = 0.0f;
 
 	//m_material = new GlobalShaderUniforms(m_shader, &m_sharedValues);
 
-	SimpleMaterialUniforms *simpleMaterialUniforms = 
-		new SimpleMaterialUniforms(m_shader, &m_sharedValues);
+	SimpleMaterialWithTextureUniforms *simpleMaterialWithTextureUniforms =
+		new SimpleMaterialWithTextureUniforms(m_shader, &m_sharedValues);
 	
-	simpleMaterialUniforms->vAmbient = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
-	simpleMaterialUniforms->vDiffuse = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
-	simpleMaterialUniforms->vSpecular = slmath::vec4(1.0f, 1.0f, 1.0f, 5.0f);
-	m_material = simpleMaterialUniforms;
+	simpleMaterialWithTextureUniforms->vAmbient = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
+	simpleMaterialWithTextureUniforms->vDiffuse = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
+	simpleMaterialWithTextureUniforms->vSpecular = slmath::vec4(1.0f, 1.0f, 1.0f, 5.0f);
+	m_material = simpleMaterialWithTextureUniforms;
 
+	m_image = graphics::Image::loadFromTGA("assets/TreeBark.tga");
+	m_texture = new graphics::Texture2D();
+	m_texture->setData(m_image);
+
+	simpleMaterialWithTextureUniforms->diffuseMap = m_texture;
 }
 
 BlinnPhongScene::~BlinnPhongScene()
@@ -130,7 +133,11 @@ graphics::Mesh* BlinnPhongScene::createTeapotMesh()
 		graphics::ATTRIB_POSITION, (slmath::vec3*)TeapotData::positions, TeapotData::numVertices),
 
 		new graphics::VertexArrayImpl<slmath::vec3>(
-		graphics::ATTRIB_NORMAL, (slmath::vec3*)TeapotData::normals, TeapotData::numVertices)
+		graphics::ATTRIB_NORMAL, (slmath::vec3*)TeapotData::normals, TeapotData::numVertices),
+	
+		new graphics::VertexArrayImpl<slmath::vec3>(
+		graphics::ATTRIB_UV, (slmath::vec3*)TeapotData::texCoords, TeapotData::numVertices)
+
 	};
 
 	//create vertex buffer from vertex array
