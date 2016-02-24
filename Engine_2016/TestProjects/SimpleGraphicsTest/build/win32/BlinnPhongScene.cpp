@@ -28,16 +28,18 @@ BlinnPhongScene::BlinnPhongScene()
 	SimpleMaterialWithTextureUniforms *simpleMaterialWithTextureUniforms =
 		new SimpleMaterialWithTextureUniforms(m_shader, &m_sharedValues);
 	
-	simpleMaterialWithTextureUniforms->vAmbient = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
-	simpleMaterialWithTextureUniforms->vDiffuse = slmath::vec4(0.5f, 0.2f, 1.0f, 1.0f);
-	simpleMaterialWithTextureUniforms->vSpecular = slmath::vec4(1.0f, 1.0f, 1.0f, 5.0f);
+	simpleMaterialWithTextureUniforms->vAmbient = slmath::vec4(0.25f, 0.25f, 0.25f, 1.0f);
+	simpleMaterialWithTextureUniforms->vDiffuse = slmath::vec4(0.5f, 0.5f, 0.5f, 1.0f);
+	simpleMaterialWithTextureUniforms->vSpecular = slmath::vec4(0.25f, 0.25f, 0.25f, 5.0f);
 	m_material = simpleMaterialWithTextureUniforms;
 
 	m_image = graphics::Image::loadFromTGA("assets/TreeBark.tga");
 	m_texture = new graphics::Texture2D();
 	m_texture->setData(m_image);
 
-	simpleMaterialWithTextureUniforms->diffuseMap = m_texture;
+ 	simpleMaterialWithTextureUniforms->diffuseMap = m_texture;
+
+	
 }
 
 BlinnPhongScene::~BlinnPhongScene()
@@ -85,7 +87,9 @@ void BlinnPhongScene::update(graphics::ESContext* esContext, float deltaTime)
 	m_sharedValues.matModelViewProj = matModelViewProj;
 
 	m_sharedValues.lightPos = slmath::vec3(0.0, 70.0f, 70.0f);
-	m_sharedValues.camPos = slmath::vec3(0.0, 70.0f, 70.0f);
+
+	//float value = std::chrono::system_clock::now();
+	m_sharedValues.camPos = slmath::vec3(0.0, 70.0f /* sin()*/, 70.0f);
 }
 
 void BlinnPhongScene::render(graphics::ESContext* esContext)

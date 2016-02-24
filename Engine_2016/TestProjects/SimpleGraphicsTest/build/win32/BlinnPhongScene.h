@@ -13,6 +13,10 @@
 
 #include "SimpleMaterialUniforms.h"
 
+//kokeilu
+#include <math.h>
+#include <ctime>
+
 class BlinnPhongScene : public Scene
 {
 public:

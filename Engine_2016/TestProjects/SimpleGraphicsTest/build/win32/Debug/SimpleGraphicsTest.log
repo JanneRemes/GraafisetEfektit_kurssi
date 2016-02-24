@@ -1,4 +1,4 @@
-﻿Build started 17.2.2016 16:07:31.
+﻿Build started 24.2.2016 16:11:02.
      1>Project "C:\Users\AleksiLuo1\Documents\GitHub\GraafisetEfektit_kurssi\Engine_2016\TestProjects\SimpleGraphicsTest\build\win32\SimpleGraphicsTest.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          call copyassets.bat
@@ -89,4 +89,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.48
+Time Elapsed 00:00:01.49

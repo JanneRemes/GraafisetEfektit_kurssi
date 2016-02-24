@@ -30,21 +30,21 @@ public:
 		m_materialAmbientLoc = glGetUniformLocation(shader->getProgram(), "g_Material.vAmbient");
 		m_materialDiffuseLoc = glGetUniformLocation(shader->getProgram(), "g_Material.vDiffuse");
 		m_materialSpecularloc = glGetUniformLocation(shader->getProgram(), "g_Material.vSpecular");
-		m_diffuseTextureLoc = glGetUniformLocation(shader->getProgram(), "DiffuseTexture");
+		//m_diffuseTextureLoc = glGetUniformLocation(shader->getProgram(), "DiffuseTexture");
 	}
 
 	virtual void bind(graphics::Shader *shader)
 	{
-		shader->bind();
+		//shader->bind();
 		m_globalShaderUniforms->bind(shader);
 		glUniform4fv(m_materialAmbientLoc, 1, &vAmbient.x);
 		glUniform4fv(m_materialDiffuseLoc, 1, &vDiffuse.x);
 		glUniform4fv(m_materialSpecularloc, 1, &vSpecular.x);
-		
+		/*
 		glActiveTexture(GL_TEXTURE0 + 0);
 		glBindTexture(GL_TEXTURE_2D, diffuseMap->getTextureId());
 
-		glUniform1i(m_diffuseTextureLoc, 0);
+		glUniform1i(m_diffuseTextureLoc, 0);*/
 
 	}
 
@@ -55,7 +55,7 @@ private:
 	GLint m_materialAmbientLoc;
 	GLint m_materialDiffuseLoc;
 	GLint m_materialSpecularloc;
-	GLint m_diffuseTextureLoc;
+	//GLint m_diffuseTextureLoc;
 
 };
 
@@ -72,7 +72,7 @@ public:
 	{
 	}
 
-	virtual void getUniformLocation(graphics::Shader* shader)
+	virtual void getUniformLocations(graphics::Shader* shader)
 	{
 		SimpleMaterialUniforms::getUniformLocations(shader);
 
@@ -82,12 +82,16 @@ public:
 	virtual void bind(graphics::Shader* shader)
 	{
 		SimpleMaterialUniforms::bind(shader);
-		//bind diffuse texture to texture sampler unit #0
-		glActiveTexture(GL_TEXTURE0 + 0);
+		////bind diffuse texture to texture sampler unit #0
+ 		glActiveTexture(GL_TEXTURE0 + 0);
 		glBindTexture(GL_TEXTURE_2D, diffuseMap->getTextureId());
 
-		//set sampler unit 0 to be used as sampler for diffuse map uniformn
+		////set sampler unit 0 to be used as sampler for diffuse map uniform
+		//shader->bind();
 		glUniform1i(m_diffuseMapLoc, 0);
+
+		////getUniformLocation(shader);
+		//glUniform1i(m_diffuseMapLoc, 0);
 	}
 
 private:
