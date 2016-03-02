@@ -33,7 +33,7 @@ BlinnPhongScene::BlinnPhongScene()
 	simpleMaterialWithTextureUniforms->vSpecular = slmath::vec4(0.25f, 0.25f, 0.25f, 5.0f);
 	m_material = simpleMaterialWithTextureUniforms;
 
-	m_image = graphics::Image::loadFromTGA("assets/TreeBark.tga");
+	m_image = graphics::Image::loadFromTGA("assets/WoodDiffuse.tga");
 	m_texture = new graphics::Texture2D();
 	m_texture->setData(m_image);
 

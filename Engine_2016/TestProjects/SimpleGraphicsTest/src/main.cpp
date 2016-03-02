@@ -11,6 +11,7 @@
 #include "Tehtävä2.h"
 #include "SimpleMeshRenderingScene.h"
 #include "BlinnPhongScene.h"
+#include "ReflectionScene.h"
 
 // Current scene and max num of scenes
 core::Ref<Scene> m_currentScene = 0;
@@ -43,7 +44,7 @@ void changeCurrentScene(int index)
 	case 0: m_currentScene = new TriangleScene(); break;
 	case 1: m_currentScene = new QuadScene(); break;
 	//case 2: m_currentScene = new QuadScene2(); break;
-	case 2: m_currentScene = new BlinnPhongScene(); break;
+	case 2: m_currentScene = new ReflectionScene(); break;
 	default:
 		break;
 	}

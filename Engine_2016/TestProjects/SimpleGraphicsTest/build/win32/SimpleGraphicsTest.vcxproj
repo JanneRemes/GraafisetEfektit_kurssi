@@ -94,12 +94,12 @@
     <ClCompile Include="..\..\src\GlobalShaderUniforms.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\MyMaterials.cpp" />
+    <ClCompile Include="..\..\src\ReflectionScene.cpp" />
     <ClCompile Include="..\..\src\scene.cpp" />
     <ClCompile Include="..\..\src\SimpleMeshRenderingScene.cpp" />
     <ClCompile Include="..\..\src\teapot.cpp" />
     <ClCompile Include="..\..\src\tehtävä2.cpp" />
     <ClCompile Include="BlinnPhongScene.cpp" />
-    <ClCompile Include="ReflectionScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\BlingPhongScene - SMR.h" />

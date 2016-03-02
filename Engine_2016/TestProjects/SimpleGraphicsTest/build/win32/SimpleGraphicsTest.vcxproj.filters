@@ -42,7 +42,7 @@
     <ClCompile Include="..\..\src\BlingPhonScene - MRS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ReflectionScene.cpp">
+    <ClCompile Include="..\..\src\ReflectionScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
